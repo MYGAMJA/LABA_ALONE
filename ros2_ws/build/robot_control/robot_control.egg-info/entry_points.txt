@@ -1,0 +1,2 @@
+[console_scripts]
+keyboard_cmd_vel = robot_control.keyboard_cmd_vel:main
