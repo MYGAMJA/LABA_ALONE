@@ -1,0 +1,117 @@
+<robot name="two_wheel_robot">
+
+  <!-- ================= -->
+  <!-- Base -->
+  <!-- ================= -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.3 0.2 0.1"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="0.3 0.2 0.1"/>
+      </geometry>
+    </collision>
+  </link>
+
+
+  <!-- ================= -->
+  <!-- Left Wheel -->
+  <!-- ================= -->
+  <link name="left_wheel">
+    <visual>
+      <!-- cylinder 기본은 Z축이라서 바퀴처럼 눕힘 -->
+      <origin rpy="1.5707 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.02"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin rpy="1.5707 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+
+
+  <!-- ================= -->
+  <!-- Right Wheel -->
+  <!-- ================= -->
+  <link name="right_wheel">
+    <visual>
+      <origin rpy="1.5707 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.02"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin rpy="1.5707 0 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+
+
+  <!-- ================= -->
+  <!-- Caster Wheel -->
+  <!-- ================= -->
+  <link name="caster_wheel">
+    <visual>
+      <geometry>
+        <sphere radius="0.03"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <geometry>
+        <sphere radius="0.03"/>
+      </geometry>
+    </collision>
+  </link>
+
+
+  <!-- ================= -->
+  <!-- JOINTS -->
+  <!-- ================= -->
+
+
+  <!-- Left wheel joint -->
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+
+    <!-- 위치 -->
+    <origin xyz="0 0.11 -0.05"/>
+
+    <!-- 회전축 -->
+    <axis xyz="0 1 0"/>
+  </joint>
+
+
+  <!-- Right wheel joint -->
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+
+    <origin xyz="0 -0.11 -0.05"/>
+
+    <axis xyz="0 1 0"/>
+  </joint>
+
+
+  <!-- caster -->
+  <joint name="caster_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="caster_wheel"/>
+
+    <origin xyz="-0.12 0 -0.05"/>
+  </joint>
+
+</robot>
