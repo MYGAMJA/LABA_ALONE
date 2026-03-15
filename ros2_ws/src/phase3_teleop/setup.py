@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'robot_control'
+package_name = 'phase3_teleop'
 
 setup(
     name=package_name,
@@ -14,7 +14,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='ethan',
-    maintainer_email='ethan@todo.todo',
+    maintainer_email='gam09139@hanyang.ac.kr',
     description='TODO: Package description',
     license='TODO: License declaration',
     extras_require={
@@ -24,7 +24,6 @@ setup(
     },
     entry_points={
         'console_scripts': [
-        'keyboard_cmd_vel = phase3_teleop.keyboard_cmd_vel:main',
         ],
     },
 )
