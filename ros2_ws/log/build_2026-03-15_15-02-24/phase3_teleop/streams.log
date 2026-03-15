@@ -1,0 +1,24 @@
+[0.958s] Invoking command in '/home/ethan/Desktop/LABA_ALONE/ros2_ws/src/phase3_teleop': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ethan/Desktop/LABA_ALONE/ros2_ws/build/phase3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/Desktop/LABA_ALONE/ros2_ws/install/phase3_teleop/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/phase3_teleop build --build-base /home/ethan/Desktop/LABA_ALONE/ros2_ws/build/phase3_teleop/build install --record /home/ethan/Desktop/LABA_ALONE/ros2_ws/build/phase3_teleop/install.log --single-version-externally-managed install_data
+[1.151s] running egg_info
+[1.164s] writing ../../build/phase3_teleop/phase3_teleop.egg-info/PKG-INFO
+[1.164s] writing dependency_links to ../../build/phase3_teleop/phase3_teleop.egg-info/dependency_links.txt
+[1.165s] writing entry points to ../../build/phase3_teleop/phase3_teleop.egg-info/entry_points.txt
+[1.165s] writing requirements to ../../build/phase3_teleop/phase3_teleop.egg-info/requires.txt
+[1.168s] writing top-level names to ../../build/phase3_teleop/phase3_teleop.egg-info/top_level.txt
+[1.196s] reading manifest file '../../build/phase3_teleop/phase3_teleop.egg-info/SOURCES.txt'
+[1.201s] writing manifest file '../../build/phase3_teleop/phase3_teleop.egg-info/SOURCES.txt'
+[1.201s] running build
+[1.201s] running build_py
+[1.201s] copying phase3_teleop/keyboard_cmd_vel.py -> /home/ethan/Desktop/LABA_ALONE/ros2_ws/build/phase3_teleop/build/lib/phase3_teleop
+[1.201s] running install
+[1.209s] running install_lib
+[1.226s] copying /home/ethan/Desktop/LABA_ALONE/ros2_ws/build/phase3_teleop/build/lib/phase3_teleop/keyboard_cmd_vel.py -> /home/ethan/Desktop/LABA_ALONE/ros2_ws/install/phase3_teleop/lib/python3.12/site-packages/phase3_teleop
+[1.227s] byte-compiling /home/ethan/Desktop/LABA_ALONE/ros2_ws/install/phase3_teleop/lib/python3.12/site-packages/phase3_teleop/keyboard_cmd_vel.py to keyboard_cmd_vel.cpython-312.pyc
+[1.231s] running install_data
+[1.231s] running install_egg_info
+[1.250s] removing '/home/ethan/Desktop/LABA_ALONE/ros2_ws/install/phase3_teleop/lib/python3.12/site-packages/phase3_teleop-0.0.0-py3.12.egg-info' (and everything under it)
+[1.251s] Copying ../../build/phase3_teleop/phase3_teleop.egg-info to /home/ethan/Desktop/LABA_ALONE/ros2_ws/install/phase3_teleop/lib/python3.12/site-packages/phase3_teleop-0.0.0-py3.12.egg-info
+[1.253s] running install_scripts
+[1.435s] Installing keyboard_cmd_vel script to /home/ethan/Desktop/LABA_ALONE/ros2_ws/install/phase3_teleop/lib/phase3_teleop
+[1.435s] writing list of installed files to '/home/ethan/Desktop/LABA_ALONE/ros2_ws/build/phase3_teleop/install.log'
+[1.491s] Invoked command in '/home/ethan/Desktop/LABA_ALONE/ros2_ws/src/phase3_teleop' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ethan/Desktop/LABA_ALONE/ros2_ws/build/phase3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/Desktop/LABA_ALONE/ros2_ws/install/phase3_teleop/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/phase3_teleop build --build-base /home/ethan/Desktop/LABA_ALONE/ros2_ws/build/phase3_teleop/build install --record /home/ethan/Desktop/LABA_ALONE/ros2_ws/build/phase3_teleop/install.log --single-version-externally-managed install_data

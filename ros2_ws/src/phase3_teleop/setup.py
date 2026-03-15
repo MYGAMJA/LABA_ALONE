@@ -23,7 +23,8 @@ setup(
         ],
     },
     entry_points={
-        'console_scripts': [
-        ],
-    },
+    'console_scripts': [
+        'keyboard_cmd_vel = phase3_teleop.keyboard_cmd_vel:main',
+    ],
+},
 )
