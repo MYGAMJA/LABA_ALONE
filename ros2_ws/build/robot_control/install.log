@@ -4,6 +4,12 @@
 /home/ethan/Desktop/LABA_ALONE/ros2_ws/install/robot_control/lib/python3.12/site-packages/robot_control/__pycache__/keyboard_cmd_vel.cpython-312.pyc
 /home/ethan/Desktop/LABA_ALONE/ros2_ws/install/robot_control/share/ament_index/resource_index/packages/robot_control
 /home/ethan/Desktop/LABA_ALONE/ros2_ws/install/robot_control/share/robot_control/package.xml
+/home/ethan/Desktop/LABA_ALONE/ros2_ws/install/robot_control/share/robot_control/launch/maze_sim.launch.py
+/home/ethan/Desktop/LABA_ALONE/ros2_ws/install/robot_control/share/robot_control/launch/gazebo_sim.launch.py
+/home/ethan/Desktop/LABA_ALONE/ros2_ws/install/robot_control/share/robot_control/urdf/simple_robot_gazebo.urdf
+/home/ethan/Desktop/LABA_ALONE/ros2_ws/install/robot_control/share/robot_control/urdf/simple_robot.urdf
+/home/ethan/Desktop/LABA_ALONE/ros2_ws/install/robot_control/share/robot_control/urdf/robot_world.sdf
+/home/ethan/Desktop/LABA_ALONE/ros2_ws/install/robot_control/share/robot_control/worlds/maze_world.world
 /home/ethan/Desktop/LABA_ALONE/ros2_ws/install/robot_control/lib/python3.12/site-packages/robot_control-0.0.0-py3.12.egg-info/SOURCES.txt
 /home/ethan/Desktop/LABA_ALONE/ros2_ws/install/robot_control/lib/python3.12/site-packages/robot_control-0.0.0-py3.12.egg-info/requires.txt
 /home/ethan/Desktop/LABA_ALONE/ros2_ws/install/robot_control/lib/python3.12/site-packages/robot_control-0.0.0-py3.12.egg-info/PKG-INFO

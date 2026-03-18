@@ -1,3 +1,4 @@
+README.md
 package.xml
 setup.cfg
 setup.py
@@ -8,9 +9,15 @@ setup.py
 ../../build/robot_control/robot_control.egg-info/requires.txt
 ../../build/robot_control/robot_control.egg-info/top_level.txt
 ../../build/robot_control/robot_control.egg-info/zip-safe
+launch/gazebo_sim.launch.py
+launch/maze_sim.launch.py
 resource/robot_control
 robot_control/__init__.py
 robot_control/keyboard_cmd_vel.py
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
+urdf/robot_world.sdf
+urdf/simple_robot.urdf
+urdf/simple_robot_gazebo.urdf
+worlds/maze_world.world
