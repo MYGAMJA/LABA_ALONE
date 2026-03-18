@@ -2,7 +2,7 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription, SetEnvironmentVariable, TimerAction
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, PythonExpression
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
@@ -16,6 +16,7 @@ def generate_launch_description():
     z = LaunchConfiguration('z')
     with_teleop = LaunchConfiguration('with_teleop')
     cleanup_existing = LaunchConfiguration('cleanup_existing')
+    headless = LaunchConfiguration('headless')
 
     pkg_share = FindPackageShare('robot_control')
     urdf_path = PathJoinSubstitution([pkg_share, 'urdf', urdf_file])
@@ -24,7 +25,11 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             PathJoinSubstitution([FindPackageShare('ros_gz_sim'), 'launch', 'gz_sim.launch.py'])
         ),
-        launch_arguments={'gz_args': [world, ' -r']}.items(),
+        launch_arguments={
+            'gz_args': PythonExpression([
+                "'", world, "' + (' -r -s' if '", headless, "' == 'true' else ' -r')"
+            ])
+        }.items(),
     )
 
     spawn_robot = Node(
@@ -65,6 +70,7 @@ def generate_launch_description():
             '/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist',
             '/odom@nav_msgs/msg/Odometry@gz.msgs.Odometry',
             '/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V',
+            '/scan@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan',
         ],
     )
 
@@ -85,6 +91,7 @@ def generate_launch_description():
         DeclareLaunchArgument('z', default_value='0.1'),
         DeclareLaunchArgument('with_teleop', default_value='true'),
         DeclareLaunchArgument('cleanup_existing', default_value='true'),
+        DeclareLaunchArgument('headless', default_value='false'),
         SetEnvironmentVariable(
             name='GZ_SIM_RESOURCE_PATH',
             value=PathJoinSubstitution([pkg_share]),

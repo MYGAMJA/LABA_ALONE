@@ -113,6 +113,34 @@
     </collision>
   </link>
 
+  <!-- ================= LIDAR ================= -->
+  <link name="lidar_link">
+    <inertial>
+      <origin xyz="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0"
+               iyy="0.0001" iyz="0"
+               izz="0.0001"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.04"/>
+      </geometry>
+      <material name="lidar_material">
+        <color rgba="0.2 0.2 0.2 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.04"/>
+      </geometry>
+    </collision>
+  </link>
+
   <!-- ================= JOINTS ================= -->
   <joint name="left_wheel_joint" type="continuous">
     <parent link="base_link"/>
@@ -134,6 +162,12 @@
     <parent link="base_link"/>
     <child link="caster_wheel"/>
     <origin xyz="-0.12 0 0.03" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="0.10 0 0.18" rpy="0 0 0"/>
   </joint>
 
   <!-- ================= GAZEBO PHYSICS ================= -->
@@ -169,6 +203,31 @@
     <kp>1000000.0</kp>
     <kd>10.0</kd>
     <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <gazebo reference="lidar_link">
+    <material>Gazebo/Black</material>
+    <sensor name="lidar_sensor" type="gpu_ray">
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <update_rate>10</update_rate>
+      <topic>/scan</topic>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.12</min>
+          <max>12.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+    </sensor>
   </gazebo>
 
   <!-- ================= DIFF DRIVE PLUGIN ================= -->
